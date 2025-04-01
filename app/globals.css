@@ -8,3 +8,6 @@ html{
   @apply scroll-smooth
 }
 
+::-webkit-scrollbar{
+  display: none;
+}
