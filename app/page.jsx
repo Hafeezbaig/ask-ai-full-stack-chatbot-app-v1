@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useState } from "react";
 import Sidebar from '@/components/Sidebar'
 import PromptBox from '@/components/PromptBox'
+import Message from "@/components/Message";
 
 export default function Home() {
   const [expand, setExpand] = useState(false);
@@ -34,7 +35,9 @@ export default function Home() {
             </>
           ):
           (
-          <div></div>
+          <div>
+            <Message role='user' content='What is nestjs' />
+          </div>
         )
         }
         {/* prompt box */}
