@@ -2,7 +2,7 @@ import { assets } from '@/assets/assets'
 import Image from 'next/image'
 import React from 'react'
 
-const sidebar = ({ expand, setExpand }) => {
+const Sidebar = ({ expand, setExpand }) => {
     return (
         <div className={`flex flex-col justify-between bg-[#1b1c1e] pt-7 transition-all z-50 max-md:absolute max-md:h-screen ${expand ? 'p-4 w-64' : 'md:w-20 w-0 max-md:overflow-hidden'}`}>
             <div>
@@ -59,4 +59,4 @@ const sidebar = ({ expand, setExpand }) => {
     )
 }
 
-export default sidebar
+export default Sidebar
