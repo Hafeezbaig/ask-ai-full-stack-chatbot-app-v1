@@ -63,6 +63,7 @@ const Sidebar = ({ expand, setExpand }) => {
                         user ? <UserButton /> : <Image src={assets.profile_icon} alt='image' className='w-7' />
                     }
                     {expand && <span>My Profile</span>}
+                    {/* myprofile fix later */}
                 </div>
             </div>
 
