@@ -1,11 +1,11 @@
 "use client"
 
-import { assets } from "@/assets/assets";
+import { assets } from "../assets/assets";
 import Image from "next/image";
 import { useState } from "react";
 import Sidebar from '@/components/Sidebar'
 import PromptBox from '@/components/PromptBox'
-import Message from "@/components/Message";
+import Message from "../components/Message";
 
 export default function Home() {
   const [expand, setExpand] = useState(false);
