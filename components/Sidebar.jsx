@@ -43,15 +43,18 @@ const Sidebar = ({ expand, setExpand }) => {
 
                 <div className={`mt-8 text-white/25 text-sm ${expand ? "block" : "hidden"}`}>
                     <p className='my-1'>Recents</p>
-                    {chats.map((chat) => (
-                        <ChatLabel
-                            key={chat._id} // this fixes the warning
-                            name={chat.name}
-                            id={chat._id}
-                            openMenu={openMenu}
-                            setOpenMenu={setOpenMenu}
-                        />
-                    ))}
+                    {chats
+                        ?.filter(chat => chat && chat._id) // ✅ only valid chats
+                        .map((chat) => (
+                            <ChatLabel
+                                key={chat._id}
+                                name={chat.name}
+                                id={chat._id}
+                                openMenu={openMenu}
+                                setOpenMenu={setOpenMenu}
+                            />
+                        ))}
+
 
 
                 </div>
